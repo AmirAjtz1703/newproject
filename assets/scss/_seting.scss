@@ -1,0 +1,138 @@
+// COLORS
+$white: #fff;
+$green: #65e496;
+$dark: #44444f;
+$violet: #80809b;
+$blue: #5189a0;
+$grey: #dedfe3;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Roboto Slab', serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  line-height: 1.6;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  background: $white;
+  color: $dark;
+}
+
+ul li {
+  display: block;
+  list-style: none;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+
+header,
+section {
+  height: 110vh;
+  width: 100%;
+  background-color: $white;
+}
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: $green;
+  height: 3px;
+  transition-property: left, right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center:active:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:hover:before {
+  left: 0;
+  right: 0;
+}
+
+.first {
+  margin-bottom: 7px;
+}
+// EXTEND
+%text {
+  max-width: 569px;
+  margin: 0 auto;
+}
+
+%text-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.92px;
+  margin-bottom: 11px;
+}
+
+%text-desc {
+  color: $green;
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.9px;
+  margin-bottom: 28.5px;
+}
+
+%text-btn {
+  margin-top: 15px;
+  width: 250px;
+  height: 48px;
+  padding: 15px 24px;
+  box-shadow: 0 2px 0 rgba(101, 228, 125, 0.5);
+  border-radius: 3px;
+  background-color: #65e47d;
+  background-image: linear-gradient(to left, rgba(101, 228, 206, 0.7) 0%, rgba(101, 228, 161, 0.7) 100%);
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.72px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s all;
+}
+
+%autor {
+  font-size: 18px;
+  letter-spacing: 0.9px;
+  margin-bottom: 19.5px;
+}

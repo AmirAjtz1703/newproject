@@ -1,0 +1,227 @@
+@import "seting";
+
+header {
+  background: url("../img/header-bg.png") no-repeat center center / cover;
+
+  .container {
+    padding-left: 6px;
+  }
+
+  .header-menu {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__logo a img {
+      width: 137px;
+      height: 28px;
+    }
+
+    .nav__link {
+      margin-left: 15px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.8px;
+      padding-bottom: 8px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .header-hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+
+    &__book {
+      width: 445px;
+      height: 639px;
+      border-radius: 5px;
+      background-color: $dark;
+      background: url("../img/book-main.png") no-repeat center center / cover;
+      text-align: center;
+
+      &-top {
+        padding-top: 25%;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &-title {
+          font-family: "Roboto Slab", serif;
+          font-size: 36px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1.44px;
+        }
+
+        &-desc {
+          color: $green;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0.7px;
+        }
+      }
+
+      &-autor {
+        display: flex;
+        align-items: flex-end;
+        bottom: 0;
+        color: $green;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.7px;
+        margin-left: 16%;
+      }
+    }
+
+    &__text {
+      @extend %text;
+
+      &-autor {
+        @extend %autor;
+      }
+
+      &-title {
+        @extend %text-title;
+      }
+
+      &-desc {
+        @extend %text-desc;
+      }
+
+      &-text {
+        font-size: 15px;
+        letter-spacing: 0.75px;
+        line-height: 24px;
+        margin-bottom: 25px;
+      }
+
+      &-btn {
+        @extend %text-btn;
+
+        &:hover {
+          padding-top: 13px;
+          box-shadow: none;
+        }
+      }
+
+      &-quote {
+        font-family: "Open Sans", italic;
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        margin-top: 35px;
+      }
+    }
+  }
+}
+
+.autor {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__text {
+    @extend %text;
+
+    &-autor {
+      @extend %autor;
+    }
+
+    &-title {
+      @extend %text-title;
+    }
+
+    &-desc {
+      @extend %text-desc;
+    }
+
+    &-text {
+      font-size: 15px;
+      letter-spacing: 0.75px;
+      line-height: 24px;
+      margin-bottom: 25px;
+    }
+
+    &-btn {
+      @extend %text-btn;
+
+      &:hover {
+        padding-top: 13px;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__img {
+    width: 435px;
+    height: 558px;
+    background-color: #44444f;
+    background-image: linear-gradient(-60deg, #5acab1 0%, #426384 100%);
+
+    .img {
+      padding-top: 44px;
+      padding-bottom: 44px;
+      padding-left: 48px;
+    }
+  }
+}
+
+.counte-numbers {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+
+    &-count {
+      background-image: linear-gradient(to left, rgba(101, 228, 206, 0.7) 0%, rgba(101, 228, 161, 0.7) 100%);
+      background-clip: text;
+      color: $green;
+      font-family: "Roboto Slab", serif;
+      font-size: 80px;
+      font-weight: 200;
+      letter-spacing: 3.2px;
+    }
+
+    &-desc {
+      margin-top: 8px;
+      font-family: 'Open Sans', sans-serif;
+      color: $violet;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.72px;
+    }
+  }
+}
